@@ -1,0 +1,23 @@
+@baseUrl = http://localhost:5078
+
+### Create a conversation
+POST {{baseUrl}}/conversations
+Content-Type: application/json
+
+{
+  "customerName": "Nguyen Van A",
+  "customerEmail": "a.nguyen@example.com",
+  "subject": "Ho tro tai khoan"
+}
+
+### List all conversations
+GET {{baseUrl}}/conversations
+
+### List waiting conversations
+GET {{baseUrl}}/conversations?status=Waiting
+
+### Get a conversation by ID
+GET {{baseUrl}}/conversations/00000000-0000-0000-0000-000000000001
+
+### Get a missing conversation
+GET {{baseUrl}}/conversations/ffffffff-ffff-ffff-ffff-ffffffffffff
